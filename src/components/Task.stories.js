@@ -5,6 +5,10 @@ import Task from "./Task";
 export default {
   component: Task,
   title: "Task",
+  argTypes: {
+    onArchiveTask: {}, // onArchiveTask 이벤트 발생 시 콜백으로 넘어오는 값 출력: onArchiveTask: "2"
+    onPinTask: { action: "onPinTask clicked!" }, // onPinTask clicked!으로 액션명을 덮어씀: onPinTask clicked!: "2"
+  },
 };
 
 const Template = (args) => <Task {...args} />;
@@ -17,12 +21,14 @@ Default.args = {
     state: "TASK_INBOX",
     updatedAt: new Date(2022, 2, 17, 9, 0),
   },
+  onArchiveTask: (id) => console.log("default", id), // Actions에는 아무것도 안찍히고, 브라우저 개발툴에 console 찍힘
 };
 
 export const Pinned = Template.bind({});
 Pinned.args = {
   task: {
     ...Default.args.task,
+    id: "2",
     state: "TASK_PINNED",
   },
 };
@@ -31,6 +37,7 @@ export const Archived = Template.bind({});
 Archived.args = {
   task: {
     ...Default.args.task,
+    id: "3",
     state: "TASK_ARCHIVED",
   },
 };
