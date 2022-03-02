@@ -1,15 +1,15 @@
 import React from "react";
 
-import TaskList from "./TaskList";
+import { PureTaskList } from "./TaskList";
 import * as TaskStories from "./Task.stories";
 
 export default {
-  component: TaskList,
+  component: PureTaskList,
   title: "TaskList",
   decorators: [(story) => <div style={{ padding: "3rem" }}>{story()}</div>], // 임의 wrapper를 제공하는 방법. React Context 등 provider로 감싸줄 때도 사용할 수 있다.
 };
 
-const Template = (args) => <TaskList {...args} />;
+const Template = (args) => <PureTaskList {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
