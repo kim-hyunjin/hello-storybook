@@ -1,0 +1,27 @@
+.bar,
+.fullbar {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.bar::-webkit-progress-bar,
+.fullbar::-webkit-progress-bar {
+    background-color: white;
+    border-radius: 10px;
+}
+
+.bar::-webkit-progress-value,
+.fullbar::-webkit-progress-value {
+    background-color: green;
+    border-radius: 10px;
+}
+
+.bar::-webkit-progress-value {
+    border-right: 2px solid black;
+}
+
+.fullbar {
+}
