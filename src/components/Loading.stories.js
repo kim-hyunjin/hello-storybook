@@ -11,7 +11,7 @@ const Template = (args) => <Loading {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  size: 30,
+  size: 32,
   lineColor: "black",
   backgroundColor: "#26c6da",
 };
