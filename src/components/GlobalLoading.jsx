@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
-import './GlobalLoading.scss';
+import styles from "./GlobalLoading.module.scss";
 
 export default function Loading() {
   useEffect(() => {
@@ -14,8 +14,8 @@ export default function Loading() {
     };
   }, []);
   return (
-    <div className='loading-container'>
-      <div className='loading'></div>
+    <div className={styles["loading-container"]}>
+      <div className={styles.loading}></div>
     </div>
   );
 }
