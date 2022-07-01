@@ -5,6 +5,8 @@ import { MockedState } from "./TaskList.stories";
 import { rest } from "msw";
 import store from "../lib/store";
 
+import { fireEvent, within, waitFor, waitForElementToBeRemoved } from "@storybook/testing-library";
+
 export default {
   component: InboxScreen,
   title: "InboxScreen",
@@ -24,6 +26,15 @@ Default.parameters = {
       }),
     ],
   },
+};
+
+Default.play = async ({ canvasElement }) => {
+  const canvas = within(canvasElement);
+  await waitForElementToBeRemoved(await canvas.findByTestId("loading"));
+  await waitFor(async () => {
+    await fireEvent.click(canvas.getByLabelText("pinTask-1"));
+    await fireEvent.click(canvas.getByLabelText("pinTask-3"));
+  });
 };
 
 /**
