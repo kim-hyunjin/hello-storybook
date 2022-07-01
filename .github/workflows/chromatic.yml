@@ -1,5 +1,5 @@
 # Workflow name
-name: "storybook-react-tutorial"
+name: "Chromatic Deployment"
 
 # Event for the workflow
 on: push
