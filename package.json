@@ -2,10 +2,13 @@
   "name": "intro-storybook-react-template",
   "version": "0.1.0",
   "description": "Starter template to get up and running quickly with React and Storybook",
-  "author": "Chromatic <https://chromatic.com/>",
+  "author": {
+    "name": "Chromatic",
+    "email": "https://chromatic.com/"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/chromaui/intro-storybook-react-template"
+    "url": "git+https://github.com/chromaui/intro-storybook-react-template.git"
   },
   "bugs": {
     "url": "https://github.com/chromaui/intro-storybook-react-template/issues"
@@ -31,7 +34,8 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "init-msw": "msw init public/"
+    "init-msw": "msw init public/",
+    "chromatic": "npx chromatic --project-token=3e92b3bb17b0"
   },
   "eslintConfig": {
     "extends": [
@@ -72,6 +76,7 @@
     "@storybook/react": "^6.4.18",
     "@storybook/testing-library": "^0.0.9",
     "@storybook/testing-react": "^1.2.3",
+    "chromatic": "^6.7.0",
     "msw": "^0.36.8",
     "msw-storybook-addon": "^1.6.0",
     "react-test-renderer": "^17.0.2",
@@ -79,5 +84,8 @@
   },
   "msw": {
     "workerDirectory": "public"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "homepage": "https://github.com/chromaui/intro-storybook-react-template#readme",
+  "_id": "intro-storybook-react-template@0.1.0"
 }
